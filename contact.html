@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <div class="border-bottom sticky-top bg-light">
-        <div class="container">
+    <div class="container">
+        <div class="border-bottom sticky-top bg-light">
             <nav class="navbar navbar-expand-sm navbar-light">
                 <span class="navbar-brand mb-0 h1 text-success font-weight-bold">Thuy Nguyen</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -38,6 +38,63 @@
                     </ul>
                 </div>
             </nav>
+
         </div>
+        <br>
+        <div class="col-md-12 h1 text-success border-bottom border-dark">Contact</div>
+        <br>
+        <br>
+        <form>
+            <div class="form-group row">
+                <label class="col-md-3" for="name">Name</label>
+                <input class="col-md-9 form-control" type="text" id="name" placeholder="Jone Doe">
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-md-3" for="user_email">Email address</label>
+                <input class="col-md-9 form-control" type="email" id="user_mail" placeholder="name@example.com">
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-md-3" for="user_message">Message</label>
+                <textarea class="form-control col-md-9" id="user_message" rows="4"></textarea>
+            </div>
+            <br>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">How do I contact you?</legend>
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="contactType" id="emailContact"
+                                value="email" checked>
+                            <label class="form-check-label" for="emailContact">
+                                Email only
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="contactType" id="phoneContact"
+                                value="phone">
+                            <label class="form-check-label" for="phoneContact">
+                                Phone Only
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="contactType" id="both"
+                                value="bothEmailPhone">
+                            <label class="form-check-label" for="both">
+                                Email & Phone
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </div>
-    <br>
+    <footer class="bg-dark fixed-bottom text-center text-white pt-5 border-top border-success">
+        &#169 Copyright 2020
+    </footer>
