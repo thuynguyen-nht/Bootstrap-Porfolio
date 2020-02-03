@@ -1,4 +1,17 @@
+body {
+    background: url("images/bg.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+}
+
 #ProfilePic {
     width: 200px;
     height: auto;
+}
+
+span {
+    width: 200px;
 }

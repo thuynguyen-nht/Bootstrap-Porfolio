@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="border-bottom sticky-top bg-light">
-            <nav class="navbar navbar-expand-sm navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <span class="navbar-brand mb-0 h1 text-success font-weight-bold">Thuy Nguyen</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -44,57 +44,91 @@
         <div class="col-md-12 h1 text-success border-bottom border-dark">Contact</div>
         <br>
         <br>
-        <form>
-            <div class="form-group row">
-                <label class="col-md-3" for="name">Name</label>
-                <input class="col-md-9 form-control" type="text" id="name" placeholder="Jone Doe">
+        <form class="mx-5">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">First and last name</span>
+                </div>
+                <input type="text" aria-label="First name" class="form-control" required>
+                <input type="text" aria-label="Last name" class="form-control" required>
             </div>
             <br>
-            <div class="form-group row">
-                <label class="col-md-3" for="user_email">Email address</label>
-                <input class="col-md-9 form-control" type="email" id="user_mail" placeholder="name@example.com">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Email</span>
+                </div>
+                <input type="email" aria-label="Email" class="form-control" placeholder="name@example.com" required>
             </div>
             <br>
-            <div class="form-group row">
-                <label class="col-md-3" for="user_message">Message</label>
-                <textarea class="form-control col-md-9" id="user_message" rows="4"></textarea>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Message</span>
+                </div>
+                <textarea class="form-control" id="user_message" rows="4"></textarea>
             </div>
+
             <br>
             <fieldset class="form-group">
-                <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">How do I contact you?</legend>
+                <div class="row container">
+                    <label class="col-form-label col-md bg-warning text-white text-center">How do I
+                        contact you?
+                    </label>
                     <div class="col-sm"></div>
                     <div class="col-sm">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="contactType" id="emailContact"
+                            <input class="form-check-input" type="checkbox" name="contactType" id="emailContact"
                                 value="email" checked>
                             <label class="form-check-label" for="emailContact">
-                                Email only
+                                Email
                             </label>
                         </div>
                     </div>
                     <div class="col-sm">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="contactType" id="phoneContact"
-                                value="phone">
+                            <input class="form-check-input" type="checkbox" name="contactType" id="phoneContact"
+                                value="phone" data-toggle="collapse" href="#phoneNumber" aria-expanded="false"
+                                aria-controls="phoneNumber">
                             <label class="form-check-label" for="phoneContact">
-                                Phone Only
+                                Phone
                             </label>
                         </div>
+
                     </div>
                     <div class="col-sm">
-                        <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="contactType" id="both"
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="contactType" id="none"
                                 value="bothEmailPhone">
-                            <label class="form-check-label" for="both">
-                                Email & Phone
+                            <label class="form-check-label" for="none">
+                                Do not contact
                             </label>
                         </div>
                     </div>
                 </div>
+                <div class="row collapse multi-collapse form-check " id="phoneNumber">
+                    <label class="col-md-2 form-check-label align-items-center offset-md-5" for="phoneNumber">Phone
+                        Number</label>
+                    <input class="col-md-3 form-check-input" type="tel" id="phoneNumber" name="phone"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                </div>
             </fieldset>
+            <button class="btn btn-success" type="submit">Submit</button>
         </form>
     </div>
     <footer class="bg-dark fixed-bottom text-center text-white pt-5 border-top border-success">
         &#169 Copyright 2020
     </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
